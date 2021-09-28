@@ -17,7 +17,7 @@ class Home extends React.Component {
 
   componentDidMount = () =>{
     axios
-    .get('http://localhost:4000/fruits')
+    .get('https://examm-301.herokuapp.com/fruits')
     .then(result=>{
       this.setState({
         fruits: result.data
@@ -35,7 +35,7 @@ class Home extends React.Component {
       email: this.props.auth0.user.email
     }
     axios
-    .post('http://localhost:4000/fruits',obj)
+    .post('https://examm-301.herokuapp.com/fruits',obj)
     .then(result => {
       this.setState({
         addedFruits:result.data
